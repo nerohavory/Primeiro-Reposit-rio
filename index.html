@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+        <!-- Conecta ao CSS externo -->
+        <link rel="stylesheet" href="estilo.css">
+
+    </head>
+    <body>
+        <!-- Bloco principal da calculadora -->
+        <div class="calculadora">
+            <!-- Exibição da operação anterior e resultado -->
+            <div class="display-container">
+                <div class="previous" id="previous"> </div> <!-- Exibe a operação -->
+                <div class="display" id="display">0</div> <!-- Exibe o número atual/result -->
+              </div>
+            <!-- Botões da calculadora -->
+            <div class="buttons">
+                <!-- Primeira linha -->
+                <button class="btn" data-action="clear">C</button>
+                <button class="btn" data-action="invert">±</button>
+                <button class="btn" data-action="percent">%</button>
+                <button class="btn operator" data-action="divide">÷</button>
+                 <!-- Segunda linha -->
+                <button class="btn" data-number="7">7</button>
+                <button class="btn" data-number="8">8</button>
+                <button class="btn" data-number="9">9</button>
+                <button class="btn operator" data-action="multiply">X</button>
+                <!-- Terceira linha -->
+                <button class="btn" data-number="4">4</button>
+                <button class="btn" data-number="5">5</button>
+                <button class="btn" data-number="6">6</button>
+                <button class="btn operator" data-action="subtract">-</button>
+                <!-- Quarta linha -->
+                <button class="btn" data-number="1">1</button>
+                <button class="btn" data-number="2">2</button>
+                <button class="btn" data-number="3">3</button>
+                <button class="btn operator" data-action="add">+</button>
+                <!-- Última linha -->
+                <button class="btn zero" data-number="0">0</button>
+                <button class="btn" data-number=".">.</button>
+                <button class="btn equals" data-action="equals">=</button>
+            </div>
+        </div>
+        <!-- Área do histórico -->
+        <div class="history">
+            <h2>Histórico</h2>
+            <ul id="historyList"></ul><!-- Lista dinâmica dos cálculos -->
+        </div>
+        <!-- Conecta ao JS externo -->
+        <script src="script.js"></script>
+    </body>
+</html>

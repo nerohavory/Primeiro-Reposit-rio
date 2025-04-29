@@ -1,0 +1,119 @@
+/* Reset geral de margens e fontes */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Centraliza o conteúdo */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #141531, #8f94fb);
+    min-height: 100vh;
+}
+/* Estilo da calculadora */
+.calculator{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 320;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+/* Exibição da operação e resultado */
+.display-container{
+  background-color:  #222;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+}
+
+.previous{
+  font-size: 1.2rem;
+  color: #aaa;
+  text-align: right;
+  min-height: 24px;
+}
+/* Grade de botões */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Botões padrão */
+.btn {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #c9c9c9;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Operadores */
+.operator {
+  background-color: #9a5311;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #ff7822;
+}
+
+/* Botão de igual */
+.equals {
+  background-color: #216352;
+  color: white;
+}
+
+.equals:hover {
+  background-color: #10ac84;
+}
+
+/* Botão zero ocupa 2 colunas */
+.zero {
+  grid-column: span 2;
+}
+
+/* Estilo da área de histórico */
+.history {
+  margin-top: 30px;
+  width: 320px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.history h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+#historyList {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+#historyList li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  color: #333;
+}
